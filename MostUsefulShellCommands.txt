@@ -1,0 +1,11 @@
+Commands:
+> to create a new document
+ls- list all the files within that directory	
+cd- go into a certain file or document
+git init- to start using git
+git add- when adding a file
+git status- what has been and can be tracker/committed
+git push -u origin master - when pushing something to the internet 
+ 
+
+
