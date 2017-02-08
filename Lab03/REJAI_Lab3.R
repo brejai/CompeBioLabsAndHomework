@@ -40,3 +40,15 @@ DataFrame1[2,2]
 DataFrame1[c(4,5,6),]
 DataFrame1[c(2,5,7),]
 DataFrame1[c(4,6),c(2,3,5)]
+oldII <-AllRankings[2,4]
+AllRankings[2,4] <- AllRankings[5,4]
+AllRankings[5,4] <- oldII
+AllRankings[3,2]
+AllRankings["III", "penny"]
+oldII <-AllRankings["II", "lenny"]
+AllRankings["II", "lenny"] <- AllRankings["V", "lenny"]
+AllRankings["V", "lenny"] <- oldII
+DataFrame1$lenny[2]
+oldII <-DataFrame1$lenny[2]
+DataFrame1$lenny[2] <- DataFrame1$lenny[5]
+DataFrame1$lenny[5] <- oldII
