@@ -32,6 +32,7 @@ typeof(AllRankings)
 EpisodeNumbers <- c("I","II","III","IV","V","VI","VII")
 #episode names as roman numerals
 row.names(AllRankings) <- EpisodeNumbers
+#assign the row names to episode numbers 
 AllRankings[3]
 DataFrame1[4]
 DataFrame1[4,]
@@ -40,15 +41,20 @@ DataFrame1[2,2]
 DataFrame1[c(4,5,6),]
 DataFrame1[c(2,5,7),]
 DataFrame1[c(4,6),c(2,3,5)]
+#making a new variable for the old row II
 oldII <-AllRankings[2,4]
 AllRankings[2,4] <- AllRankings[5,4]
 AllRankings[5,4] <- oldII
 AllRankings[3,2]
+#can go into the data set and pick a certain number in these 2 different ways
 AllRankings["III", "penny"]
 oldII <-AllRankings["II", "lenny"]
 AllRankings["II", "lenny"] <- AllRankings["V", "lenny"]
+#reasing these variables
 AllRankings["V", "lenny"] <- oldII
 DataFrame1$lenny[2]
+#i forgot what the dollar sign does but it's important!!
 oldII <-DataFrame1$lenny[2]
 DataFrame1$lenny[2] <- DataFrame1$lenny[5]
 DataFrame1$lenny[5] <- oldII
+#update the variables and switch them to the original 
