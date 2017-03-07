@@ -1,9 +1,12 @@
+#part 1
 x <- 9 
 for (i in seq(x)) {
   if(i > 5)
-  print (x > 5)
+  print ("number is greater than five")
+} else {
+  print("number is less than five")
 }
-#checks if the value is larger than 5.
+#checks if the value is larger than 5, gives message about above or less than 5
 
 Vector1 <- read.csv("CompBioLabsAndHomework/Lab05/Vector1.csv")
 
@@ -21,9 +24,11 @@ which(Vector1$x < 100 & Vector1$x > 50) -> Y
 
 read.csv("compBioSandbox/CompBio_on_git/Labs/Lab04/CO2_data_cut_paste.csv") -> Vector2
 #first year for which data on "Gas" emissions were non-zero
-which(Vector2$Gas < 0 | Vector2$Gas > 0)
-(135,1)
+which(Vector2$Gas < 0 | Vector2$Gas > 0) -> gasIndices
+Vector2$Year[gasIndices[1]]
 
+#part 2
+#variables
 totalGenerations <- 1000
 initPrey <- 100 	# initial prey abundance
 initPred <- 10		# initial predator abundance
@@ -44,7 +49,7 @@ for (t in 2:length(time)) {
   if (p[t] < 0)
     p[t] <- 0
  }
-
-#graph for the preadtors
-plot (x=time, y=n)
-lines (time, n)
+# the carrying capacity equation
+#graph for the predators
+plot (x=time, y=p)
+lines (time, p)
