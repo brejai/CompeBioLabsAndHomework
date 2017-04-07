@@ -12,7 +12,7 @@ Gum <- 2*(1.34)
 for (i in seq(1,8)) {
   x <- PiggyBank + Allowance - Gum
   PiggyBank <- x
-  print(x)
+  print(x) if all of this is true then print x
   
 } #total amount of money each week for 8 weeks
   
@@ -20,8 +20,7 @@ PopSize <- 2000
 Shrinkage <- PopSize*(.05)
 for (i in seq(1,7)) {
   print(PopSize-Shrinkage) 
-  x <- PopSize-Shrinkage
-  PopSize <- x
+  PopSize <- PopSize-Shrinkage
   Shrinkage <- PopSize*(.05)
 } 
 #calculates each years size
@@ -46,7 +45,7 @@ for (i in seq(1,n)) {
   data[i] <- 3*i
 }
 
-
+print()# error message 
 data <- rep(0,n)
 data[1] <- 1
 for (i in seq(2,n)){

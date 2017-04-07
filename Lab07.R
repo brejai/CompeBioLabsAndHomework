@@ -18,7 +18,10 @@ Fib <- function(n, starting = 1){
 }
  
 
-
+#have default values for each of the arguments
+#iterate the model
+#make a plot with axes properly labeled.
+e. return the abundance data.
 
 DiscreteTimeFunction <- function(r=.8,k=10000,finaltime=12,Start=2500){ #set paramtersfor function
   time <- seq(1,finaltime)
