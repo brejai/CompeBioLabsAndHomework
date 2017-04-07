@@ -24,7 +24,8 @@ for (i in seq(1,7)) {
   Shrinkage <- PopSize*(.05)
 } 
 #calculates each years size
-
+# n[t – 1] is the abundance of the population in the previous time step
+#r is the intrinsic growth rate of the population
 Start <- 2500
 n <- rep(2500, 12)
 for (t in seq(2,12)) {
@@ -37,7 +38,7 @@ abundance <- n
 time <- 1:12
 plot(time,abundance)
 
-
+#Use the rep command to make a vector of 18 zeros
 n <- 18
 data <- rep(0,n)
 
@@ -51,15 +52,17 @@ data[1] <- 1
 for (i in seq(2,n)){
   data[i] <- 1 + (2*data[i-1])
 }
-
+print()
 n <- 20 #first 20 numbers of the fibonacci sequence
 Fib <- rep(1,n)
 for (i in seq (3,n)){
   Fib[i] <- Fib[i-1]+Fib[i-2] #general equation for any fibonacci problem
 } 
+print()
+
 #nested forloop
 CO2Data <- read.csv("compBioSandbox/CompBio_on_git/Labs/Lab04/CO2_data_cut_paste.csv") 
-MetaData <- read.csv("compBioSandbox/CompBio_on_git/Labs/Lab04/MetaData_CO2_emissions.txt")
+MetaData <- read.txt("compBioSandbox/CompBio_on_git/Labs/Lab04/MetaData_CO2_emissions.txt")
 
 #preallocate a matrix for the data
 nRows <- dim(CO2Data)[1]
@@ -77,7 +80,7 @@ for(j in seq(2, nCols)){
   #j is a new variable for the collums
   #i is for thw rows
   for(i in seq(2,nRows)) {
-    
+    #percent change from year i-1 to year i
     
     CO2matrix[i-1,j] <- (CO2Data[i,j]-CO2Data[(i-1),j])/CO2Data[(i-1),j] * 100 
   } #multiply by 100 to get the percent change 
