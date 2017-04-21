@@ -41,6 +41,6 @@ abundance <- n
 time <- 1:12
 plot(time,abundance)
 
-
+#problem 3
 #adjacency matrix 
 
