@@ -32,7 +32,7 @@ sample(x= 1:4, size= 4, replace= FALSE, prob = NULL)
 Blair <- 
 Frankie <- 
 Kim <- 
-Morgan <-  
+Morgan <- 
 
 
 # 13 rolls of a fair 6 sided die
